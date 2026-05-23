@@ -1,4 +1,4 @@
-import QuoteSection from "../component/insight/quote/QuoteSection";
+import QuoteSection from "../../src/component/insight/quote/QuoteSection";
 
 export default function Quote () {
     return (

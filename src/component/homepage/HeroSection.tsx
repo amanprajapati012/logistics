@@ -86,14 +86,14 @@ export default function HeroSection() {
                   {slide.description}
                 </p>
 
-                {/* BUTTONS */}
+                {/* BUTTONS - Stacked on Mobile, Row on Desktop */}
                 <div className="mt-10 flex flex-col sm:flex-row gap-5">
-                  {/* READ MORE */}
+                  {/* REQUEST A QUOTE (Always Top on Mobile) */}
                   <Link
-                    href="/about"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-4 text-white font-medium hover:bg-red-700 transition-all duration-300 shadow-2xl shadow-red-500/30"
+                    href="/quote"
+                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-4 text-white font-medium hover:bg-red-700 transition-all duration-300 shadow-2xl shadow-red-500/30 order-1"
                   >
-                    Read More
+                    Request a Quote
 
                     <ArrowRight
                       size={18}
@@ -101,12 +101,12 @@ export default function HeroSection() {
                     />
                   </Link>
 
-                  {/* FREE QUOTE */}
+                  {/* CONTACT US (Always Bottom on Mobile) */}
                   <Link
-                    href="/quote"
-                    className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/15 backdrop-blur-xl px-8 py-4 text-white font-medium hover:bg-white hover:text-black transition-all duration-300"
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/15 backdrop-blur-xl px-8 py-4 text-white font-medium hover:bg-white hover:text-black transition-all duration-300 order-2"
                   >
-                    Free Quote
+                    Contact Us
                   </Link>
                 </div>
 
@@ -148,18 +148,18 @@ export default function HeroSection() {
         </div>
       ))}
 
-      {/* LEFT BUTTON */}
+      {/* LEFT BUTTON - Hidden on Mobile to prevent cropping/overlap layout issues */}
       <button
         onClick={prevSlide}
-        className="absolute left-5 top-1/2 -translate-y-1/2 z-40 w-14 h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white hover:bg-red-600 transition-all duration-300"
+        className="absolute left-5 top-1/2 -translate-y-1/2 z-40 w-14 h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/20 hidden md:flex items-center justify-center text-white hover:bg-red-600 transition-all duration-300"
       >
         <ChevronLeft size={28} />
       </button>
 
-      {/* RIGHT BUTTON */}
+      {/* RIGHT BUTTON - Hidden on Mobile to prevent cropping/overlap layout issues */}
       <button
         onClick={nextSlide}
-        className="absolute right-5 top-1/2 -translate-y-1/2 z-40 w-14 h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white hover:bg-red-600 transition-all duration-300"
+        className="absolute right-5 top-1/2 -translate-y-1/2 z-40 w-14 h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/20 hidden md:flex items-center justify-center text-white hover:bg-red-600 transition-all duration-300"
       >
         <ChevronRight size={28} />
       </button>

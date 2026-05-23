@@ -16,6 +16,7 @@ import {
 const services = [
   {
     id: 1,
+    slug: "dry-van",
     image:
       "https://images.unsplash.com/photo-1566473965997-3de9c817e938?q=80&w=1600&auto=format&fit=crop",
     subtitle: "Dry Van Service",
@@ -28,6 +29,7 @@ const services = [
 
   {
     id: 2,
+    slug: "reefer",
     image:
       "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1600&auto=format&fit=crop",
     subtitle: "Reefer",
@@ -40,6 +42,7 @@ const services = [
 
   {
     id: 3,
+    slug: "box-truck",
     image:
       "https://images.unsplash.com/photo-1616432043562-3671ea2e5242?q=80&w=1600&auto=format&fit=crop",
     subtitle: "Box Truck Service",
@@ -52,6 +55,7 @@ const services = [
 
   {
     id: 4,
+    slug: "liftgate",
     image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1600&auto=format&fit=crop",
     subtitle: "Liftgate Service",
@@ -64,6 +68,7 @@ const services = [
 
   {
     id: 5,
+    slug: "safe-freight",
     image:
       "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop",
     subtitle: "Secure Logistics",
@@ -76,6 +81,7 @@ const services = [
 
   {
     id: 6,
+    slug: "global-freight",
     image:
       "https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=1600&auto=format&fit=crop",
     subtitle: "Worldwide Coverage",
@@ -113,9 +119,8 @@ export default function ServicesSection() {
 
           {/* DESCRIPTION */}
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
-            Reliable freight and logistics solutions
-            designed to deliver your shipments safely,
-            efficiently, and on time.
+            Reliable freight and logistics solutions designed to deliver your
+            shipments safely, efficiently, and on time.
           </p>
         </div>
 
@@ -147,10 +152,7 @@ export default function ServicesSection() {
                   <div
                     className={`absolute bottom-5 left-5 flex h-18 w-18 items-center justify-center rounded-[24px] bg-gradient-to-br ${service.iconBg} shadow-[0_15px_35px_rgba(15,23,42,0.18)]`}
                   >
-                    <Icon
-                      size={32}
-                      className="text-white"
-                    />
+                    <Icon size={32} className="text-white" />
                   </div>
                 </div>
 
@@ -177,17 +179,17 @@ export default function ServicesSection() {
                     <div className="h-[3px] w-16 rounded-full bg-gradient-to-r from-cyan-500 to-red-500 transition-all duration-500 group-hover:w-28" />
 
                     {/* BUTTON */}
-                    <Link
-                      href="/services"
-                      className="group/btn inline-flex items-center gap-2 rounded-full bg-[#081120] px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-cyan-500 hover:text-black"
-                    >
-                      Read More
+                   <Link
+  href={`/services/${service.slug}`}
+  className="group/btn inline-flex items-center gap-2 rounded-full bg-[#081120] px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-cyan-500 hover:text-black sm:px-6"
+>
+  Read More
 
-                      <ArrowRight
-                        size={16}
-                        className="transition-transform duration-300 group-hover/btn:translate-x-1"
-                      />
-                    </Link>
+  <ArrowRight
+    size={16}
+    className="transition-transform duration-300 group-hover/btn:translate-x-1"
+  />
+</Link>
                   </div>
                 </div>
 

@@ -56,6 +56,12 @@ export default function Header() {
   const [insightOpen, setInsightOpen] =
     useState(false);
 
+  // Helper function to close menu and dropdown on link click
+  const handleMobileClick = () => {
+    setMobileMenu(false);
+    setInsightOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 z-50 w-full">
       {/* TOP STRIP */}
@@ -260,6 +266,7 @@ export default function Header() {
             <div className="flex flex-col gap-5">
               <Link
                 href="/"
+                onClick={handleMobileClick}
                 className="text-[16px] font-medium text-[#081120]"
               >
                 Home
@@ -267,6 +274,7 @@ export default function Header() {
 
               <Link
                 href="/aboutus"
+                onClick={handleMobileClick}
                 className="text-[16px] font-medium text-[#081120]"
               >
                 About Us
@@ -274,6 +282,7 @@ export default function Header() {
 
               <Link
                 href="/services"
+                onClick={handleMobileClick}
                 className="text-[16px] font-medium text-[#081120]"
               >
                 Services
@@ -309,6 +318,7 @@ export default function Header() {
                   <div className="ml-3 flex flex-col gap-4 border-l border-cyan-200 pl-5">
                     <Link
                       href="/fleet-gallery"
+                      onClick={handleMobileClick}
                       className="text-slate-600 transition hover:text-cyan-600"
                     >
                       Fleet Gallery
@@ -316,6 +326,7 @@ export default function Header() {
 
                     <Link
                       href="/features"
+                      onClick={handleMobileClick}
                       className="text-slate-600 transition hover:text-cyan-600"
                     >
                       Features
@@ -323,6 +334,7 @@ export default function Header() {
 
                     <Link
                       href="/quote"
+                      onClick={handleMobileClick}
                       className="text-slate-600 transition hover:text-cyan-600"
                     >
                       Free Quote
@@ -333,6 +345,7 @@ export default function Header() {
 
               <Link
                 href="/contact"
+                onClick={handleMobileClick}
                 className="text-[16px] font-medium text-[#081120]"
               >
                 Contact
@@ -343,6 +356,7 @@ export default function Header() {
                 <div className="flex flex-col gap-4">
                   <a
                     href="mailto:info@moonstone-freight.com"
+                    onClick={handleMobileClick}
                     className="flex items-center gap-3 text-slate-600"
                   >
                     <Mail size={17} />
@@ -352,6 +366,7 @@ export default function Header() {
 
                   <a
                     href="tel:+18172104500"
+                    onClick={handleMobileClick}
                     className="flex items-center gap-3 text-slate-600"
                   >
                     <Phone size={17} />
@@ -361,6 +376,7 @@ export default function Header() {
 
                   <Link
                     href="/quote"
+                    onClick={handleMobileClick}
                     className="mt-2 rounded-full bg-[#081120] py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-cyan-500 hover:text-black"
                   >
                     Request Quote
